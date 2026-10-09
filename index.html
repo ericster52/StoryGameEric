@@ -1,1 +1,76 @@
-<!-- Add your index page here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Light</title>
+</head>
+
+<body>
+    <header>
+        <h1>The Last Light</h1>
+        <img src="lighthouse.jpg" alt="A lighthouse in a storm" width="400">
+        <p>A mystery story by Eric Truong</p>
+
+        <a href="about.html">About Eric</a>
+    </header>
+
+    <main>
+        <h2>Prologue</h2>
+
+        <p>
+            The storm began just before sunset. By midnight, the power across
+            the island had gone out, and the lighthouse was dark.
+        </p>
+
+        <p>
+            You are the newest volunteer at the island's history museum.
+            The lighthouse keeper, Mara Vale, left you a note.
+        </p>
+
+        <blockquote>
+            “If the light goes out, find the brass key. Do not trust the bell.”
+        </blockquote>
+
+        <p>
+            A flash of lightning reveals a figure standing on the lighthouse
+            balcony. Then the figure disappears.
+        </p>
+
+        <h2>Choose Your First Move</h2>
+
+        <form action="game.html" method="get">
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <p>Choose where to go:</p>
+
+            <input type="radio" id="cottage" name="location" value="cottage" required>
+            <label for="cottage">Go to the Keeper's Cottage</label>
+
+            <br>
+
+            <input type="radio" id="tidepools" name="location" value="tidepools">
+            <label for="tidepools">Search the Tide Pools</label>
+
+            <br>
+
+            <input type="radio" id="shipwreck" name="location" value="shipwreck">
+            <label for="shipwreck">Go to the Shipwreck</label>
+
+            <br><br>
+
+            <label for="reason">Why did you choose this location?</label>
+            <input type="text" id="reason" name="reason">
+
+            <br><br>
+
+            <button type="submit">Start the Story</button>
+        </form>
+    </main>
+
+    <footer>
+     
+    </footer>
+</body>
+</html>
