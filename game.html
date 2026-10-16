@@ -3,58 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js" defer></script>
+    <title>The Last Light</title>
+    <style>
+        #scene-text {
+            white-space: pre-line;
+        }
 
+        #choices-container button {
+            display: block;
+            margin: 8px 0;
+        }
+    </style>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-      <nav>
-            <ul> 
+        <nav>
+            <ul>
                 <li><a href="index.html">Home</a></li>
-            </ul>
-            <ul> 
                 <li><a href="game.html">Play the game</a></li>
-            </ul>
-            <ul> 
                 <li><a href="about.html">About the creator</a></li>
             </ul>
         </nav>
+        <h1>The Last Light</h1>
+        <p>A mystery story by Eric Truong</p>
+        <img src="https://images.pexels.com/photos/30214896/pexels-photo-30214896/free-photo-of-scenic-lighthouse-on-rocky-cliffs-by-ocean.jpeg?auto=compress&amp;fit=crop&amp;w=400&amp;h=224" alt="A lighthouse above a rocky cliff." width="200" height="112">
+        <img src="https://images.pexels.com/photos/27420659/pexels-photo-27420659/free-photo-of-a-lighthouse-and-waves-crashing-on-the-shore.jpeg?auto=compress&amp;fit=crop&amp;w=400&amp;h=224" alt="Waves breaking over rocks along the shore." width="200" height="112">
     </header>
 
     <main>
-    <header>
-        <h1 id="scene-title">  </h1>
-        <h2 id="character-name">  </h2>
-    </header>
-    
-    <section>
-    <p id="scene-text">     </p>
+        <header>
+            <h2 id="scene-title" tabindex="-1"></h2>
+            <h3 id="character-name"></h3>
+        </header>
 
-    </section>
+        <section>
+            <p id="scene-text"></p>
+        </section>
 
-    <section>
-        <div id="choices-container"> </div>
-    </section>   
-        
-    <section>
-        <p> Current HP:</p>
-        <ul>
-            <li id="health-display"> 100</li>
-        </ul>
+        <section>
+            <div id="choices-container"></div>
+        </section>
 
-        <p> Inventory:</p>
-        <ul>
-            <li id="inventory-display"> </li>
-        </ul>
+        <section>
+            <p>Energy: <span id="health-display">100</span></p>
+            <p>Inventory: <span id="inventory-display">Empty</span></p>
+            <p id="message-display" role="status"></p>
+        </section>
 
-        <p id="message-display"></p>
-    </section>
-
-
+        <p><a href="game.html">Start over</a></p>
+        <noscript>Please enable JavaScript to play the story.</noscript>
     </main>
-    <footer>
 
-    </footer>
 </body>
 </html>
