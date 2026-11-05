@@ -1,57 +1,174 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body>
-<div class = "container">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lost Dog - Danny</title>
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
 
+<body>
+  <div class="container py-4">
 
+    <!-- Heading and description -->
+    <h1 class="text-center display-1 text-bg-danger border border-warning border-5 p-3">
+      I lost my dog!!
+    </h1>
 
+    <p class="text-center display-6 text-bg-success p-2">
+      My dog's name is Danny.
+    </p>
 
+    <p class="text-center">
+      Last seen running away with my homework.
+    </p>
 
-    <h1 class = "text-center display-1 bg-danger border border-warning border-5">I lost my dog!!</h1>
-    <P class="text-center display-6 bg-success ">My dogs name is Danny</P>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <p class="text-center">
+      He responds to his name, but only if you have food.
+    </p>
 
-    <div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <p class="text-center">
+      Reward: one bag of chips and my appreciation.
+    </p>
+
+    <!-- Dog photo carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide bg-dark mb-4">
+
+      <div class="carousel-indicators">
+        <button type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"></button>
+
+        <button type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+
+        <button type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="smallDog.jpg"
+               class="d-block w-100 object-fit-contain"
+               height="400"
+               alt="A small dog who might be Danny">
+        </div>
+
+        <div class="carousel-item">
+          <img src="blackDog.jpg"
+               class="d-block w-100 object-fit-contain"
+               height="400"
+               alt="A black dog who also might be Danny">
+        </div>
+
+        <div class="carousel-item">
+          <img src="dumbDog.jpg"
+               class="d-block w-100 object-fit-contain"
+               height="400"
+               alt="Danny making a goofy face">
+        </div>
+      </div>
+
+      <button class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Buttons linking to different websites -->
+    <div class="text-center mb-4">
+      <a href="https://www.petfinder.com/"
+         class="btn btn-primary btn-lg active m-1">
+        Look for Danny
+      </a>
+
+      <a href="https://www.akc.org/"
+         class="btn btn-success btn-sm m-1">
+        Learn About Dogs
+      </a>
+
+      <button type="button"
+              class="btn btn-secondary btn-sm m-1"
+              disabled>
+        Claim Reward — Unavailable
+      </button>
+    </div>
+
+    <!-- Practice form -->
+    <form class="border border-success border-3 rounded p-3">
+      <h2>Have you seen Danny?</h2>
+
+      <p class="form-text">
+        This is a practice form. It does not send information.
+      </p>
+
+      <div class="mb-3">
+        <label for="yourName" class="form-label">Your name</label>
+        <input type="text"
+               class="form-control"
+               id="yourName"
+               name="yourName"
+               placeholder="Enter your name">
+      </div>
+
+      <div class="mb-3">
+        <label for="yourEmail" class="form-label">Your email</label>
+        <input type="email"
+               class="form-control"
+               id="yourEmail"
+               name="yourEmail"
+               placeholder="name@example.com">
+      </div>
+
+      <div class="mb-3">
+        <label for="dogLocation" class="form-label">
+          Where did you see him?
+        </label>
+        <textarea class="form-control"
+                  id="dogLocation"
+                  name="dogLocation"
+                  rows="3"
+                  placeholder="Describe the location"></textarea>
+      </div>
+
+      <div class="form-check mb-3">
+        <input class="form-check-input"
+               type="checkbox"
+               id="hasHomework"
+               name="hasHomework">
+        <label class="form-check-label" for="hasHomework">
+          He was carrying someone's homework.
+        </label>
+      </div>
+
+      <button type="reset" class="btn btn-warning">
+        Clear Form
+      </button>
+    </form>
+
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="smallDog.jpg" class="d-block w-100" alt="smallDog">
-    </div>
-    <div class="carousel-item">
-      <img src="blackDog.jpg" class="d-block w-100" alt="blackDog">
-    </div>
-    <div class="carousel-item">
-      <img src="dumbDog.jpg" class="d-block w-100" alt="dumbDog">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
-
-
-
-
-
-
-    </div>
-  </body>
+  <!-- Bootstrap JavaScript at the end of the body -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
 </html>
