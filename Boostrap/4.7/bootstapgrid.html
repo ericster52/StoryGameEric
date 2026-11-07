@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Car Alignment Chart</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <style>
+    .car-box {
+      border: 3px dashed;
+      padding: 10px;
+      height: 100%;
+    }
+
+    .car-photo {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+  <div class="container text-center py-4">
+
+    <h1 class="display-3">Car Alignment Chart</h1>
+    <p>Where does your car belong?</p>
+
+    <!-- First row: Good -->
+    <div class="row g-3 mb-3">
+
+      <div class="col-4">
+        <div class="car-box bg-success-subtle border-success">
+          <h2 class="fs-5">Lawful Good</h2>
+          <img src="minivan.jpg" class="car-photo" alt="Minivan">
+          <p class="mt-2 mb-0">Minivan</p>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="car-box bg-success-subtle border-success">
+          <h2 class="fs-5">Neutral Good</h2>
+          <img src="prius.jpg" class="car-photo" alt="Toyota Prius">
+          <p class="mt-2 mb-0">Toyota Prius</p>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="car-box bg-success-subtle border-success">
+          <h2 class="fs-5">Chaotic Good</h2>
+          <img src="miata.jpg" class="car-photo" alt="Mazda Miata">
+          <p class="mt-2 mb-0">Mazda Miata</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Second row: Neutral -->
+    <div class="row g-3 mb-3">
+
+      <div class="col-4">
+        <div class="car-box bg-warning-subtle border-warning">
+          <h2 class="fs-5">Lawful Neutral</h2>
+          <img src="civic.jpg" class="car-photo" alt="Honda Civic">
+          <p class="mt-2 mb-0">Honda Civic</p>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="car-box bg-warning-subtle border-warning">
+          <h2 class="fs-5">True Neutral</h2>
+          <img src="jeep.jpg" class="car-photo" alt="Jeep Wrangler">
+          <p class="mt-2 mb-0">Jeep Wrangler</p>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="car-box bg-warning-subtle border-warning">
+          <h2 class="fs-5">Chaotic Neutral</h2>
+          <img src="supra.jpg" class="car-photo" alt="Toyota Supra">
+          <p class="mt-2 mb-0">Toyota Supra</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Third row: Evil -->
+    <div class="row g-3">
+
+      <div class="col-4">
+        <div class="car-box bg-danger-subtle border-danger">
+          <h2 class="fs-5">Lawful Evil</h2>
+          <img src="tesla.jpg" class="car-photo" alt="Tesla">
+          <p class="mt-2 mb-0">Tesla</p>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="car-box bg-danger-subtle border-danger">
+          <h2 class="fs-5">Neutral Evil</h2>
+          <img src="ferrari.jpg" class="car-photo" alt="Ferrari">
+          <p class="mt-2 mb-0">Ferrari</p>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="car-box bg-danger-subtle border-danger">
+          <h2 class="fs-5">Chaotic Evil</h2>
+          <img src="mustang.jpg" class="car-photo" alt="Ford Mustang">
+          <p class="mt-2 mb-0">Ford Mustang</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
