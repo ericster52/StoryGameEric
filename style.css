@@ -1,104 +1,117 @@
-* {
-    box-sizing: border-box;
-}
-
+/* Bootstrap loads first. These rules customize its appearance. */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     color: #202832;
     background-color: #e6edf1;
     line-height: 1.6;
 }
 
-/* Shared header class for all three pages */
-.heading {
+h1, h2, .navbar-brand {
     font-family: Georgia, serif;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-align: center;
+}
+
+/* Shared navigation */
+.site-navbar {
+    background-color: #202832;
+    border-bottom: 2px solid #bda66a;
+}
+
+.site-navbar .navbar-brand,
+.site-navbar .nav-link.active {
+    color: #fff0bf;
+}
+
+/* Shared heading */
+.heading {
     color: #fff0bf;
     background-color: #202832;
-    margin: 20px;
-    padding: 24px;
-    border: 3px double #bda66a;
+    text-align: center;
+    border-bottom: 3px double #bda66a;
 }
 
-.heading a {
-    color: #fff0bf;
-}
-
-.heading nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.heading nav li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Reusable card class */
+/* Shared cards */
 .card {
-    width: 100%;
-    margin: 0 0 24px;
-    padding: 20px;
-    border: 2px solid #bda66a;
     background-color: #fffaf0;
-    text-align: left;
+    border: 2px solid #bda66a;
     border-radius: 8px;
 }
 
-/* Unique inventory styling */
-#inventory-display {
-    display: inline-block;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #513c14;
-    background-color: #fff0bf;
-    padding: 6px 12px;
-    border: 2px solid #96712d;
+.card-title {
+    margin-bottom: 1rem;
 }
 
-/* Game text and choices */
+.story-note {
+    background-color: #fff0bf;
+    border-left: 4px solid #96712d;
+    font-size: 1.1rem;
+}
+
+/* Customize Bootstrap buttons */
+.btn-primary {
+    --bs-btn-bg: #204e72;
+    --bs-btn-border-color: #204e72;
+    --bs-btn-hover-bg: #16364f;
+    --bs-btn-hover-border-color: #16364f;
+    --bs-btn-active-bg: #16364f;
+    --bs-btn-active-border-color: #16364f;
+    --bs-btn-disabled-bg: #204e72;
+    --bs-btn-disabled-border-color: #204e72;
+    --bs-btn-focus-shadow-rgb: 32, 78, 114;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #204e72;
+    --bs-btn-border-color: #204e72;
+    --bs-btn-hover-bg: #204e72;
+    --bs-btn-hover-border-color: #204e72;
+    --bs-btn-active-bg: #16364f;
+    --bs-btn-active-border-color: #16364f;
+    --bs-btn-focus-shadow-rgb: 32, 78, 114;
+}
+
+/* Form colors */
+.form-control:focus,
+.form-check-input:focus {
+    border-color: #204e72;
+    box-shadow: 0 0 0 0.25rem rgba(32, 78, 114, 0.2);
+}
+
+.form-check-input:checked {
+    background-color: #204e72;
+    border-color: #204e72;
+}
+
+/* Preserve line breaks in the story */
 #scene-text {
     white-space: pre-line;
 }
 
-#choices-container button {
-    display: block;
-    margin: 8px 0;
+/* Inventory */
+.inventory-badge {
+    max-width: 100%;
+    white-space: normal;
+    text-align: left;
+    overflow-wrap: anywhere;
+    line-height: 1.6;
+    color: #513c14;
+    background-color: #fff0bf;
+    border: 1px solid #96712d;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+#message-display {
+    color: #842029;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border-color: #bda66a;
 }
 
 a {
     color: #204e72;
 }
 
-button {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #204e72;
-    padding: 10px 16px;
-    border: 2px solid #16364f;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-footer {
-    padding: 16px;
-    text-align: center;
+.site-footer {
+    background-color: #fffaf0;
+    border-top: 1px solid #bda66a;
 }

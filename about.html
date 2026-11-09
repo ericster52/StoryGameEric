@@ -3,54 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Eric</title>
+    <title>About Eric | The Last Light</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
-    <header class="heading">
-        <h1>Eric Truong</h1>
+    <nav class="navbar navbar-expand-md site-navbar" data-bs-theme="dark" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">The Last Light</a>
 
-        <img src="roblox.jpg" alt="Eric's Roblox image" width="250">
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#main-nav"
+                aria-controls="main-nav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <p>
-            <a href="index.html">Back to the Story</a>
-        </p>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="game.html">Play the game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About the creator</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="heading py-4 py-md-5">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Eric Truong</h1>
+            <p class="lead mb-0">Creator of The Last Light</p>
+        </div>
     </header>
 
-    <main>
-        <div class="card">
-            <h2>About me</h2>
+    <main class="container py-4 py-md-5">
+        <div class="row g-4">
+            <section class="col-md-5" aria-labelledby="about-title">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <img
+                            src="roblox.jpg"
+                            alt="Eric's Roblox image"
+                            width="250"
+                            class="img-fluid rounded d-block mx-auto mb-4"
+                        >
 
-            <p>
-                I created The Last Light as an interactive mystery story.
-                I designed the characters, setting, and choices.
-            </p>
-        </div>
+                        <h2 id="about-title" class="card-title">About me</h2>
 
-        <div class="card">
-            <h2>How the game was made</h2>
+                        <p>
+                            I created The Last Light as an interactive
+                            mystery story. I designed the characters,
+                            setting, and choices.
+                        </p>
 
-            <ol>
-                <li>
-                    Created the story
-                    <ul>
-                        <li>Designed the lighthouse setting</li>
-                        <li>Created the characters</li>
-                    </ul>
-                </li>
+                        <a href="index.html" class="btn btn-outline-primary">
+                            Back to the Story
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-                <li>
-                    Built the webpage
-                    <ul>
-                        <li>Added the story text</li>
-                        <li>Added a form</li>
-                    </ul>
-                </li>
+            <section class="col-md-7" aria-labelledby="making-title">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h2 id="making-title" class="card-title mb-3">
+                            How the game was made
+                        </h2>
 
-                <li>Tested the website</li>
-            </ol>
+                        <ol class="list-group list-group-numbered mb-4">
+                            <li class="list-group-item">
+                                <span class="fw-bold">Created the story</span>
+
+                                <ul class="mt-2">
+                                    <li>Designed the lighthouse setting</li>
+                                    <li>Created the characters</li>
+                                </ul>
+                            </li>
+
+                            <li class="list-group-item">
+                                <span class="fw-bold">Built the webpage</span>
+
+                                <ul class="mt-2">
+                                    <li>Added the story text</li>
+                                    <li>Added a form</li>
+                                </ul>
+                            </li>
+
+                            <li class="list-group-item">
+                                <span class="fw-bold">Tested the website</span>
+                            </li>
+                        </ol>
+
+                        <a href="game.html" class="btn btn-primary">
+                            Play the game
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
+
+    <footer class="site-footer py-3 text-center">
+        <div class="container">
+            The Last Light by Eric Truong |
+            <a href="about.html">About Eric</a>
+        </div>
+    </footer>
 </body>
 </html>

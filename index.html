@@ -4,106 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Last Light</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
-    <header class="heading">
-        <h1>The Last Light</h1>
+    <nav class="navbar navbar-expand-md site-navbar" data-bs-theme="dark" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">The Last Light</a>
 
-        <img
-            src="lighthouse.jpg"
-            alt="A lighthouse in a storm"
-            width="400"
-        >
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#main-nav"
+                aria-controls="main-nav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <p>A mystery story by Eric Truong</p>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="game.html">Play the game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About the creator</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <a href="about.html">About Eric</a>
+    <header class="heading py-4 py-md-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-md-6">
+                    <h1 class="display-4 fw-bold">The Last Light</h1>
+                    <p class="lead mb-0">A mystery story by Eric Truong</p>
+                </div>
+
+                <div class="col-md-6">
+                    <img
+                        src="lighthouse.jpg"
+                        alt="A lighthouse in a storm"
+                        width="400"
+                        class="img-fluid rounded shadow-sm"
+                    >
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Prologue</h2>
+    <main class="container py-4 py-md-5">
+        <!-- Columns stack on smaller screens. -->
+        <div class="row g-4">
+            <section class="col-lg-6" aria-labelledby="prologue-title">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h2 id="prologue-title" class="card-title">Prologue</h2>
 
-            <p>
-                The storm began just before sunset. By midnight, the power across
-                the island had gone out, and the lighthouse was dark.
-            </p>
+                        <p>
+                            The storm began just before sunset. By midnight,
+                            the power across the island had gone out, and
+                            the lighthouse was dark.
+                        </p>
 
-            <p>
-                You are the newest volunteer at the island's history museum.
-                The lighthouse keeper, Mara Vale, left you a note.
-            </p>
+                        <p>
+                            You are the newest volunteer at the island's
+                            history museum. The lighthouse keeper, Mara Vale,
+                            left you a note.
+                        </p>
 
-            <blockquote>
-                “If the light goes out, find the brass key. Do not trust the bell.”
-            </blockquote>
+                        <blockquote class="blockquote story-note rounded p-3">
+                            <p class="mb-0">
+                                “If the light goes out, find the brass key.
+                                Do not trust the bell.”
+                            </p>
+                        </blockquote>
 
-            <p>
-                A flash of lightning reveals a figure standing on the lighthouse
-                balcony. Then the figure disappears.
-            </p>
-        </section>
+                        <p class="mb-0">
+                            A flash of lightning reveals a figure standing
+                            on the lighthouse balcony. Then the figure disappears.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-        <section>
-            <h2>Choose Your First Move</h2>
+            <section class="col-lg-6" aria-labelledby="first-move-title">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h2 id="first-move-title" class="card-title">
+                            Choose Your First Move
+                        </h2>
 
-            <form action="game.html" method="get">
-                <label for="name">Enter your name:</label>
-                <input type="text" id="name" name="name" required>
+                        <form action="game.html" method="get">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">
+                                    Enter your name:
+                                </label>
 
-                <p>Choose where to go:</p>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    class="form-control"
+                                    autocomplete="given-name"
+                                    required
+                                >
+                            </div>
 
-                <input
-                    type="radio"
-                    id="cottage"
-                    name="location"
-                    value="cottage"
-                    required
-                >
-                <label for="cottage">Go to the Keeper's Cottage</label>
+                            <fieldset class="mb-3">
+                                <legend class="fs-6 fw-bold">
+                                    Choose where to go:
+                                </legend>
 
-                <br>
+                                <div class="form-check mb-2">
+                                    <input
+                                        type="radio"
+                                        id="cottage"
+                                        name="location"
+                                        value="cottage"
+                                        class="form-check-input"
+                                        required
+                                    >
+                                    <label for="cottage" class="form-check-label">
+                                        Go to the Keeper's Cottage
+                                    </label>
+                                </div>
 
-                <input
-                    type="radio"
-                    id="tidepools"
-                    name="location"
-                    value="tidepools"
-                >
-                <label for="tidepools">Search the Tide Pools</label>
+                                <div class="form-check mb-2">
+                                    <input
+                                        type="radio"
+                                        id="tidepools"
+                                        name="location"
+                                        value="tidepools"
+                                        class="form-check-input"
+                                    >
+                                    <label for="tidepools" class="form-check-label">
+                                        Search the Tide Pools
+                                    </label>
+                                </div>
 
-                <br>
+                                <div class="form-check">
+                                    <input
+                                        type="radio"
+                                        id="shipwreck"
+                                        name="location"
+                                        value="shipwreck"
+                                        class="form-check-input"
+                                    >
+                                    <label for="shipwreck" class="form-check-label">
+                                        Go to the Shipwreck
+                                    </label>
+                                </div>
+                            </fieldset>
 
-                <input
-                    type="radio"
-                    id="shipwreck"
-                    name="location"
-                    value="shipwreck"
-                >
-                <label for="shipwreck">Go to the Shipwreck</label>
+                            <div class="mb-4">
+                                <label for="reason" class="form-label">
+                                    Why did you choose this location?
+                                </label>
 
-                <br><br>
+                                <input
+                                    type="text"
+                                    id="reason"
+                                    name="reason"
+                                    class="form-control"
+                                    aria-describedby="reason-help"
+                                >
 
-                <label for="reason">
-                    Why did you choose this location?
-                </label>
-                <input type="text" id="reason" name="reason">
+                                <div id="reason-help" class="form-text">
+                                    Optional: explain what caught your attention.
+                                </div>
+                            </div>
 
-                <br><br>
-
-                <button type="submit">Start the Story</button>
-            </form>
-        </section>
+                            <button type="submit" class="btn btn-primary w-100">
+                                Start the Story
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <div>
-            <p>
-                The Last Light by Eric Truong |
-                <a href="about.html">About Eric</a>
-            </p>
+    <footer class="site-footer py-3 text-center">
+        <div class="container">
+            The Last Light by Eric Truong |
+            <a href="about.html">About Eric</a>
         </div>
     </footer>
 </body>

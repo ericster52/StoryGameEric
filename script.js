@@ -640,7 +640,9 @@ function updateScene(sceneName) {
 
   // Loop through each choice in the scene, connecting an action and nextScene if included
   scene.choices.forEach(function (choice) {
-    const button = document.createElement("button");
+   const button = document.createElement("button");
+button.type = "button";
+button.className = "btn btn-primary text-start";
 
     button.textContent = choice.text;
 
